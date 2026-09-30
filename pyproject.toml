@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "purescan"
+version = "0.1.0"
+description = "PureScan: Lossless multi-page watermark inversion for scanned PDFs."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "Purestone" }
+]
+keywords = ["pdf", "watermark", "watermark-removal", "scanned-pdf", "image-processing", "purescan"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: Scientific/Engineering :: Image Processing",
+]
+dependencies = [
+    "PyMuPDF>=1.23.0",
+    "numpy>=1.20.0",
+    "Pillow>=9.0.0",
+    "tqdm>=4.60.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/Purestone/purescan"
+Repository = "https://github.com/Purestone/purescan"
+
+[project.scripts]
+purescan = "purescan.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["purescan*"]
